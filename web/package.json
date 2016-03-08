@@ -1,0 +1,16 @@
+{
+  "name": "ForeignExchangeCalc",
+  "version": "0.0.1",
+  "description": "Module for foreign exchanges calculations",
+  "dependencies": {},
+  "devDependencies": {
+    "grunt-contrib-requirejs": "~0.4.4",
+    "grunt-contrib-clean": "^0.7.0"
+
+  },
+  "scripts": {
+    "test": "echo \"Error: no test specified\" && exit 1"
+  },
+  "author": "Dani Buiza",
+  "license": ""
+}

@@ -1,0 +1,51 @@
+<!DOCTYPE html PUBLIC "-//W3C//DTD XHTML…3.org/TR/xhtml1/DTD/xhtml1-strict.dtd">
+<html>
+<head>
+
+    <title>FX Calculator</title>
+    <script src="build/FxCalculator.js"></script>
+
+</head>
+<body>
+
+<input type="text" class="fxamount"/>
+
+<select class="fx1">
+    <option value="USD">USD</option>
+    <option value="EUR">EUR</option>
+    <option value="GBP">GBP</option>
+    <option value="CHF">CHF</option>
+</select>
+
+
+<select class="fx2">
+    <option value="USD">USD</option>
+    <option value="EUR">EUR</option>
+    <option value="GBP">GBP</option>
+    <option value="CHF">CHF</option>
+</select>
+
+<button class="fxcalculation">calculate</button>
+
+<label class="fxrate"></label>
+
+<label class="fxresult"></label>
+
+
+<script>
+
+    $(".fxcalculation").click(function(event)
+    {
+        var fromCur = $(".fx1").val();
+        var toCur = $(".fx2").val();
+        var amountFrom = $(".fxamount").val();
+        var result = fxApp.rate(fromCur, toCur, amountFrom); //created in the wrap.start snippet
+        $(".fxrate").html(result.rate);
+        $(".fxresult").html(result.total);
+        return false;
+    });
+
+</script>
+
+</body>
+</html>
