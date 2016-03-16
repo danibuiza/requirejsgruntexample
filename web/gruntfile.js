@@ -33,6 +33,7 @@ module.exports = function (grunt) {
         }
     );
 
+    //loading required npm modules
     grunt.loadNpmTasks('grunt-contrib-requirejs');
     grunt.loadNpmTasks('grunt-contrib-clean');
 
