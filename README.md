@@ -17,3 +17,9 @@ grunt
 ```
 
 then you can just open the index.html and everything should work just fine
+
+for cleaning the output just type:
+
+```{r, engine='bash', count_lines}
+grunt clean
+```
