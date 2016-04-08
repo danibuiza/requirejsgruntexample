@@ -1,17 +1,25 @@
-define([], function()
-{
+define([
+    "backbone",
+    "underscore"
+], function (Backbone, _) {
+
     'use strict';
 
-    var calculator = {};
-    /**
-     * very complicated calculations are part of this method
-     * @param amount
-     * @param rate
-     * @returns {number}
-     */
-    calculator.calculate = function(amount, rate)
-    {
-        return amount * rate;
-    };
-    return calculator;
+    return Backbone.Model.extend(
+        {
+
+            initialize: function(options){
+                //just to show that we can use now Backbone models in an AMD env
+            },
+
+            /**
+             * very complicated calculations are part of this method
+             * @param amount
+             * @param rate
+             * @returns {number}
+             */
+            calculate: function (amount, rate) {
+                return amount * rate;
+            }
+        });
 });

@@ -1,4 +1,7 @@
-define([], function () {
+define([
+    "backbone",
+    "underscore"
+], function (Backbone, _) {
     'use strict';
 
     var connector = {};
@@ -10,8 +13,9 @@ define([], function () {
      */
     connector.retrieveData = function (from, to) {
         var rate = 1;
-        if ("EUR" === from) {
-            if ("USD" === to) {
+        //just to show that underscore is usable here
+        if (_.isEqual("EUR", from)) {
+            if (_.isEqual("USD", to)) {
                 rate = 1.5;
             }
             else if ("GBP" === to) {
@@ -19,7 +23,8 @@ define([], function () {
             } else if ("CHF" === to) {
                 rate = 0.24;
             }
-        } else if ("USD" === from) {
+        }
+        else if ("USD" === from) {
             if ("EUR" === to) {
                 rate = 0.5;
             }
