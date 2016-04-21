@@ -23,3 +23,5 @@ for cleaning the output just type:
 ```{r, engine='bash', count_lines}
 grunt clean
 ```
+
+In the file main.js there is an example of shim configuration for Backbone and Underscore.
