@@ -3,9 +3,7 @@
 <head>
 
     <title>FX Calculator</title>
-    <script src="build/FxCalculator.js"></script>
-    <!-- <script src="js/fx/nonAMDConnector.js"></script> wihtout AMD this is the only way to add such files -->
-
+    <script data-main="js/main" src="js/require.js"></script>
 </head>
 <body>
 
@@ -32,21 +30,6 @@
 
 <label class="fxresult"></label>
 
-
-<script>
-
-    $(".fxcalculation").click(function(event)
-    {
-        var fromCur = $(".fx1").val();
-        var toCur = $(".fx2").val();
-        var amountFrom = $(".fxamount").val();
-        var result = fxApp.rate(fromCur, toCur, amountFrom); //created in the wrap.start snippet
-        $(".fxrate").html(result.rate);
-        $(".fxresult").html(result.total);
-        return false;
-    });
-
-</script>
 
 </body>
 </html>
